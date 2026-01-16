@@ -12,58 +12,87 @@
 </head>
 <body class="min-h-screen bg-white">
     <!-- Header/Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="glass-header fixed top-0 left-0 right-0 z-50">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <h1 class="text-2xl font-bold text-gold" style="font-family: 'Cormorant Garamond', serif;">SoulDoctor™</h1>
+                <h1 class="text-2xl font-bold text-gold" style="">SoulDoctor™</h1>
             </div>
             <div class="hidden md:flex space-x-6">
                 <a href="index.html" class="text-gold font-semibold hover:text-gold-dark transition">Home</a>
-                <a href="about-me.html" class="text-gray-700 hover:text-gold transition">About Me</a>
-                <a href="ministries.html" class="text-gray-700 hover:text-gold transition">Ministries</a>
-                <a href="podcast-media.html" class="text-gray-700 hover:text-gold transition">Podcast & Media</a>
-                <a href="books-resources.html" class="text-gray-700 hover:text-gold transition">Books & Resources</a>
-                <a href="blog.html" class="text-gray-700 hover:text-gold transition">Blog</a>
-                <a href="contact-prayer.html" class="text-gray-700 hover:text-gold transition">Contact & Prayer Request</a>
+                <a href="about-me.html" class="text-white hover:text-gold transition">About Me</a>
+                <a href="ministries.html" class="text-white hover:text-gold transition">Ministries</a>
+                <a href="podcast-media.html" class="text-white hover:text-gold transition">Podcast & Media</a>
+                <a href="books-resources.html" class="text-white hover:text-gold transition">Books & Resources</a>
+                <a href="blog.html" class="text-white hover:text-gold transition">Blog</a>
+                <a href="contact-prayer.html" class="text-white hover:text-gold transition">Contact & Prayer Request</a>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-700">
+                <button id="mobile-menu-button" class="text-white">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-md">
-            <a href="index.html" class="block py-2 text-gray-700 hover:text-gold">Home</a>
-            <a href="about-me.html" class="block py-2 text-gray-700 hover:text-gold">About Me</a>
-            <a href="ministries.html" class="block py-2 text-gray-700 hover:text-gold">Ministries</a>
-            <a href="podcast-media.html" class="block py-2 text-gray-700 hover:text-gold">Podcast & Media</a>
-            <a href="books-resources.html" class="block py-2 text-gray-700 hover:text-gold">Books & Resources</a>
-            <a href="blog.html" class="block py-2 text-gray-700 hover:text-gold">Blog</a>
-            <a href="contact-prayer.html" class="block py-2 text-gray-700 hover:text-gold">Contact & Prayer Request</a>
+        <div id="mobile-menu" class="hidden md:hidden glass-header py-2 px-4 shadow-md">
+            <a href="index.html" class="block py-2 text-gold hover:text-gold font-semibold">Home</a>
+            <a href="about-me.html" class="block py-2 text-white hover:text-gold">About Me</a>
+            <a href="ministries.html" class="block py-2 text-white hover:text-gold">Ministries</a>
+            <a href="podcast-media.html" class="block py-2 text-white hover:text-gold">Podcast & Media</a>
+            <a href="books-resources.html" class="block py-2 text-white hover:text-gold">Books & Resources</a>
+            <a href="blog.html" class="block py-2 text-white hover:text-gold">Blog</a>
+            <a href="contact-prayer.html" class="block py-2 text-white hover:text-gold">Contact & Prayer Request</a>
         </div>
     </header>
 
-    <main>
-        <!-- A. HERO SECTION -->
-        <section class="relative h-[600px] md:h-[700px] flex items-center justify-center bg-gradient-to-br from-cream via-white to-cream animate-fade-in">
-            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23FFD700" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-soft-black animate-fade-in-up animate-delay-200" style="font-family: 'Cormorant Garamond', serif; line-height: 1.2;">
-                    Build the Temple. Carry the Presence. Restore the Foundations.
-                </h1>
-                <p class="text-xl md:text-2xl text-gold mb-8 font-semibold animate-fade-in-up animate-delay-300">SoulDoctor™ – Evangelista Embick</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-400">
-                    <a href="about-me.html" class="btn-gold">About Me</a>
-                    <a href="ministries.html" class="btn-outline-gold">Join the Movement</a>
+    <main class="pt-0">
+        <!-- A. HERO SECTION WITH SLIDER -->
+        <section class="relative h-[600px] md:h-[700px] overflow-hidden mt-0">
+            <!-- Image Slider -->
+            <div class="hero-slider">
+                <div class="hero-slide active">
+                    <img src="img/pray.jpeg" alt="Hero Image 1" class="hero-image">
                 </div>
+                <div class="hero-slide">
+                    <img src="img/smile.jpeg" alt="Hero Image 2" class="hero-image">
+                </div>
+                <div class="hero-slide">
+                    <img src="img/cake.jpeg" alt="Hero Image 3" class="hero-image">
+                </div>
+                <div class="hero-slide">
+                    <img src="img/dance.jpeg" alt="Hero Image 4" class="hero-image">
+                </div>
+            </div>
+            
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-[5]"></div>
+            
+            <!-- Content -->
+            <div class="relative z-[15] h-full flex items-center justify-center">
+                <div class="text-center px-4 max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white animate-fade-in-up animate-delay-200" style=" line-height: 1.2;">
+                        Build the Temple. Carry the Presence. Restore the Foundations.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gold mb-8 font-semibold animate-fade-in-up animate-delay-300">SoulDoctor™ – Evangelista Embick</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-delay-400">
+                        <a href="about-me.html" class="btn-gold">About Me</a>
+                        <a href="ministries.html" class=" btn-outline bg-white text-gold hover:bg-outline hover:text-white">Join the Movement</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Indicators -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-[20] flex gap-3">
+                <button class="slider-indicator active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="slider-indicator" data-slide="1" aria-label="Slide 2"></button>
+                <button class="slider-indicator" data-slide="2" aria-label="Slide 3"></button>
+                <button class="slider-indicator" data-slide="3" aria-label="Slide 4"></button>
             </div>
         </section>
 
         <!-- B. COVENANT SCRIPTURE -->
         <section class="section-padding bg-white animate-on-scroll">
             <div class="container mx-auto px-4 text-center max-w-3xl">
-                <p class="text-2xl md:text-3xl font-light italic text-soft-black mb-4" style="font-family: 'Cormorant Garamond', serif;">
+                <p class="text-2xl md:text-3xl font-light italic text-soft-black mb-4" style="">
                     "For we are God's handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do."
                 </p>
                 <p class="text-lg text-gold font-semibold">Ephesians 2:10</p>
@@ -89,7 +118,7 @@
                         <div class="text-4xl text-gold mb-4">
                             <i class="fas fa-hands-praying"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-soft-black" style="font-family: 'Cormorant Garamond', serif;">Ministries</h3>
+                        <h3 class="text-2xl font-bold mb-4 text-soft-black" style="">Ministries</h3>
                         <p class="text-gray-600 mb-6">Join us in building the temple and carrying the presence through our various ministries.</p>
                         <a href="ministries.html" class="btn-outline-gold">Learn More</a>
                     </div>
@@ -99,7 +128,7 @@
                         <div class="text-4xl text-gold mb-4">
                             <i class="fas fa-podcast"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-soft-black" style="font-family: 'Cormorant Garamond', serif;">Podcast</h3>
+                        <h3 class="text-2xl font-bold mb-4 text-soft-black" style="">Podcast</h3>
                         <p class="text-gray-600 mb-6">Listen to prophetic teachings and messages that will transform your life.</p>
                         <a href="podcast-media.html" class="btn-outline-gold">Listen Now</a>
                     </div>
@@ -109,7 +138,7 @@
                         <div class="text-4xl text-gold mb-4">
                             <i class="fas fa-book"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-soft-black" style="font-family: 'Cormorant Garamond', serif;">Books</h3>
+                        <h3 class="text-2xl font-bold mb-4 text-soft-black" style="">Books</h3>
                         <p class="text-gray-600 mb-6">Transformative resources to deepen your walk with God.</p>
                         <span class="coming-soon">Coming Soon</span>
                     </div>
@@ -120,7 +149,7 @@
         <!-- E. NEWSLETTER SIGNUP -->
         <section class="section-padding bg-cream">
             <div class="container mx-auto px-4 max-w-2xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-soft-black" style="font-family: 'Cormorant Garamond', serif;">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-soft-black" style="">
                     Become a Builder — Join the Mailing List
                 </h2>
                 <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4">
@@ -152,7 +181,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-gold" style="font-family: 'Cormorant Garamond', serif;">SoulDoctor™</h3>
+                    <h3 class="text-xl font-bold mb-4 text-gold" style="">SoulDoctor™</h3>
                     <p class="mb-4 text-gray-300">Building the temple. Carrying the presence. Restoring the foundations.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-300 hover:text-gold transition"><i class="fab fa-facebook-f"></i></a>
@@ -162,7 +191,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-gold" style="font-family: 'Cormorant Garamond', serif;">Quick Links</h3>
+                    <h3 class="text-xl font-bold mb-4 text-gold" style="">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="index.html" class="text-gray-300 hover:text-gold transition">Home</a></li>
                         <li><a href="about-me.html" class="text-gray-300 hover:text-gold transition">About Me</a></li>
@@ -174,7 +203,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-gold" style="font-family: 'Cormorant Garamond', serif;">Contact</h3>
+                    <h3 class="text-xl font-bold mb-4 text-gold" style="">Contact</h3>
                     <ul class="space-y-2 text-gray-300">
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2 text-gold"></i>
@@ -208,6 +237,52 @@
                 const email = e.target.querySelector('input[type="email"]').value;
                 alert(`Thank you for subscribing! We'll be in touch at ${email}.`);
                 e.target.reset();
+            });
+        }
+
+        // Hero Slider Functionality
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.slider-indicator');
+        let currentSlide = 0;
+        const slideInterval = 5000; // 5 seconds per slide
+
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current slide and indicator
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        // Auto-advance slides
+        let slideTimer = setInterval(nextSlide, slideInterval);
+
+        // Indicator click handlers
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                clearInterval(slideTimer);
+                showSlide(index);
+                slideTimer = setInterval(nextSlide, slideInterval);
+            });
+        });
+
+        // Pause on hover
+        const heroSection = document.querySelector('.hero-slider').closest('section');
+        if (heroSection) {
+            heroSection.addEventListener('mouseenter', () => {
+                clearInterval(slideTimer);
+            });
+            heroSection.addEventListener('mouseleave', () => {
+                slideTimer = setInterval(nextSlide, slideInterval);
             });
         }
     </script>

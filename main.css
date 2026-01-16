@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     font-family: "Google Sans", sans-serif;
+     
 }
 
 :root {
-    --gold: #FFD700;
+    /* --gold: #b59410; */
+    --gold:#DAA520;
+    /* --gold: #aa6c39; */ 
     --gold-primary: #FFD700;
     --gold-dark: #DAA520;
     --gold-light: #FFE87C;
@@ -19,7 +24,7 @@
 }
 
 body {
-    font-family: "Google Sans", sans-serif;
+   
     color: var(--soft-black);
     background-color: var(--white);
     line-height: 1.6;
@@ -27,11 +32,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    /* font-family: 'Cormorant Garamond', serif; */
+     font-family: "Quicksand", sans-serif;
     font-weight: 600;
     color: var(--soft-black);
 }
-
+/* .bg-transparent{
+    background-color: transparent;
+} */
 .text-gold {
     color: var(--gold);
 }
@@ -72,8 +80,20 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
 }
 
+.btn-outline{
+     background-color: white;
+    color: var(--gold);
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-weight: 500;
+   
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block; 
+}
 .btn-outline-gold {
-    background-color: transparent;
+    background-color: white;
     color: var(--gold);
     padding: 12px 32px;
     border-radius: 4px;
@@ -84,8 +104,16 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     display: inline-block;
 }
-
+.glass-header {
+    backdrop-filter: blur(6px);
+    background-color: rgba(22, 22, 22, 0.479);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 .btn-outline-gold:hover {
+    background-color: var(--gold);
+    color: var(--white);
+}
+.btn-outline:hover {
     background-color: var(--gold);
     color: var(--white);
 }
@@ -319,6 +347,84 @@ section:not(:first-child) {
 /* Header Animation */
 header {
     animation: fadeInDown 0.6s ease-out;
+}
+
+/* Hero Slider Styles */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slideFadeOut 0.8s ease-in-out forwards;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    animation: slideFadeIn 0.8s ease-in-out forwards;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideFadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+/* Slider Indicators */
+.slider-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* border: 2px solid rgba(255, 255, 255, 0.8); */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.slider-indicator:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.slider-indicator.active {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    width: 32px;
+    border-radius: 6px;
 }
 
 /* Smooth transitions */
