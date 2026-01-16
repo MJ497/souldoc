@@ -61,6 +61,18 @@ h1, h2, h3, h4, h5, h6 {
     transition: color 0.3s ease;
 }
 
+.btn-goldd {
+    background-color: var(--gold);
+    color: var(--white);
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
 .btn-gold {
     background-color: var(--gold);
     color: var(--white);
@@ -75,6 +87,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-gold:hover {
+    background-color: var(--gold-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.btn-goldd:hover {
     background-color: var(--gold-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
@@ -454,5 +472,28 @@ height: 100%;
   }
 .text-center.holder{
    margin-bottom: 4rem;
+}
+.flexi{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flexi a{
+    width: 100%;
+    text-align: center;
+}
+.btn-goldd {
+    background-color: var(--gold);
+    color: var(--white);
+    padding: 12px ;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 }
